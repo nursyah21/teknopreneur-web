@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+.mx-2{
+  padding: 0 8px 0 8px;
+}
+a:hover{
+  text-decoration: underline;
+}
 
 .logo {
   height: 6em;
