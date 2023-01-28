@@ -1,4 +1,3 @@
-// import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import NotFound from './components/pages/NotFound'
@@ -11,8 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/'  element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/store' element={<Store />} />
+          {/* <Route path='/about' element={<About />} /> */}
+          {/* <Route path='/store' element={<Store />} /> */}
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>  
