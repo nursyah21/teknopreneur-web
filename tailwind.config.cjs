@@ -8,7 +8,13 @@ module.exports = {
     screens: {
       'sm': '640px'
     },
-    extend: {},
+    extend: {
+      screens: {
+        'desktop': '1076px',
+        'tablet': '640px',
+        'mobile': '640px',
+      }
+    },
   },
   plugins: [],
 }
