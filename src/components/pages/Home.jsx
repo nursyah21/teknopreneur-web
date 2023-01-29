@@ -24,7 +24,7 @@ function FirstSection(){
             </p>
           </div>
           
-          <div className="flex">
+          <div className="flex flex-col sm:flex-row">
             <p className="w-[300px]">
               sebuah olshop yang bergerak dalam bidang pakaian dan
               aksesoris. kami menjual berbagai macam pakaian rajut dan aksesoris rajut. 
