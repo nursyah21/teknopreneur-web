@@ -8,11 +8,15 @@ function CardItem(props){
 
   return (
     <>
-      <div className="bg-white w-[160px] tablet:w-[200px] p-2 rounded-xl text-slate-600 mx-3 mb-5 shadow-xl">
-        <img src={props.img} className="w-[160px] tablet:w-[200px]"/>
-        <p>{props.name}</p>
-        <p className="text-green-700 font-semibold">{props.price}</p>
-        <Button onClick={routeChange} variant="contained" color="success" className="!my-1 w-full">Beli</Button>
+      <div className="flex flex-col bg-white w-[160px] tablet:w-[200px] p-2 rounded-xl text-slate-600 mx-3 mb-5 shadow-xl">
+        <p className="flex-1">
+          <img src={props.img} className="w-[160px] tablet:w-[200px]"/>
+          <p>{props.name}</p>
+          <p className="text-green-700 font-semibold">{props.price}</p>
+        </p>
+        <p className="">
+          <Button onClick={routeChange} variant="contained" color="success" className="!my-1 w-full">Beli</Button>
+        </p>
       </div>
     </>
   )
