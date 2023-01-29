@@ -8,8 +8,8 @@ function CardItem(props){
 
   return (
     <>
-      <div className="bg-white w-[200px] p-2 rounded-xl text-slate-600 mx-3 mb-5 shadow-xl">
-        <img src={props.img} className="w-[200px]"/>
+      <div className="bg-white w-[160px] tablet:w-[200px] p-2 rounded-xl text-slate-600 mx-3 mb-5 shadow-xl">
+        <img src={props.img} className="w-[160px] tablet:w-[200px]"/>
         <p>{props.name}</p>
         <p className="text-green-700 font-semibold">{props.price}</p>
         <Button onClick={routeChange} variant="contained" color="success" className="!my-1 w-full">Beli</Button>
@@ -22,17 +22,39 @@ function Shop(){
   const listItems = data.map((i)=>
     <CardItem img={i.image} name={i.name} price={i.price}/>
   )
-  const name = data[0].name
-  const img = data[0].image
-  const price = data[0].price
-  const wa = 'https://api.whatsapp.com/send/?phone=082341113971&text=haiaac'
-  const shopee = 'https://shopee.co.id/inggrid_riwu'
-  
 
   return (
     <>
-      <div className="grid grid-cols-2 mobile:grid-cols-3 desktop:grid-cols-5">
+      <div className="hidden bg-[rgb(238,225,206)] desktop:flex justify-center mt-3 mb-5">
+        <img src="/handmadewithlove.webp" />
+      </div>
+      
+      <div className="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-5">
         {listItems}
+      </div>
+    </>
+  )
+}
+
+function Footer(){
+  return (
+    <>
+      <hr className="text-slate-50"></hr>
+      <div className="flex justify-center m-2 text-slate-700">
+        <div>
+          <div className="flex">
+            <a href='https://shopee.co.id/inggrid_riwu' className="flex items-center">
+              <img src="/shopee.png" className="w-[36px]"/> Shopee
+            </a>
+            <p className="ml-4"></p>
+            <a href='https://wa.me/6282341113971' className="flex items-center">
+              <img src="/whatsapp.webp" className="w-[36px]"/> Whatsapp
+            </a>
+          </div>
+          <p className="flex justify-center">
+            Copyright 2023
+          </p>
+        </div>
       </div>
     </>
   )
@@ -74,12 +96,7 @@ export default function Home(){
     <>
       <About />
       <Shop />
-      {/* home */}
-      {/* <a href='home'>home</a> */}
-      {/* store */}
-      {/* <a href='store' className='mx-2'>store</a> */}
-      {/* contact */}
-      {/* <a href='contact'>contact</a> */}
+      <Footer />
     </>
   )
 }

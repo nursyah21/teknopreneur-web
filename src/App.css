@@ -4,3 +4,12 @@ html{
   background-color: #F8EBD8;
   font-family: 'Playfair Display';
 }
+
+a{
+  color: green;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
